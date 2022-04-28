@@ -413,7 +413,8 @@ if __name__ == '__main__':
     if args.mode in ['all', 'avg-E']:
         print("Plotting average showers for different energies ...")
         if '1' in args.dataset:
-            target_energies = 2**np.linspace(8, 23, 16)
+            #target_energies = 2**np.linspace(8, 23, 16)
+            target_energies = [1024., 2000]
             plot_title = ['shower average at E = {} MeV'.format(int(en)) for en in target_energies]
         else:
             target_energies = 10**np.linspace(3, 6, 4)
